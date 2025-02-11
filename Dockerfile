@@ -11,3 +11,5 @@ COPY src .
 EXPOSE 8000
 
 CMD ["python", "app.py"]
+
+RUN echo "Hola, SOY UN TEST DE PYTHON"
