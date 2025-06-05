@@ -16,6 +16,16 @@ class BasicTests(unittest.TestCase):
         self.assertEqual(result.status_code, 200)
         self.assertEqual(result.data.decode(), "Hello, World!")
 
+    def test_par_impar(self):
+        # Envía una solicitud GET a la ruta '/par-impar'
+        result = self.app.get('/par-impar')
+
+        # Verifica que la respuesta contenga "es par" o "es impar"
+        self.assertEqual(result.status_code, 200)
+        contenido = result.data.decode()
+        self.assertTrue("es par" in contenido or "es impar" in contenido)
+
+
 
 if __name__ == "__main__":
     unittest.main()
