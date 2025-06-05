@@ -23,7 +23,7 @@ class BasicTests(unittest.TestCase):
         # Verifica que la respuesta contenga "es par" o "es impar"
         self.assertEqual(result.status_code, 200)
         contenido = result.data.decode()
-        self.assertTrue("nada" in contenido or "todo" in contenido)
+        self.assertTrue("es par" in contenido or "es impar" in contenido)
 
 
 
